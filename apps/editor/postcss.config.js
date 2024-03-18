@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
     tailwindcss: {
-      config: require('tailwind-config/tailwind.config.js')
+      config: require('@elixira/tailwind-config/tailwind.config.js')
     },
     autoprefixer: {}
   }

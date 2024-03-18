@@ -1,4 +1,4 @@
-import 'tailwind-config/input.css'
+import '@elixira/tailwind-config/input.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
