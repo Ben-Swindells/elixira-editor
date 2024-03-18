@@ -1,4 +1,3 @@
-import './assets/main.css'
 import 'tailwind-config/input.css'
 
 import React from 'react'
