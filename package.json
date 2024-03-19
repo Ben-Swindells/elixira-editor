@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "dev": "turbo dev --concurrency=50%",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "docs": "pnpm -- turbo run dev --filter=ui --no-cache"
   },
   "devDependencies": {
     "@elixira/eslint-config": "workspace:*",

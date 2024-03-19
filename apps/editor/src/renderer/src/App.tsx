@@ -1,12 +1,7 @@
-import { Button } from '@elixira/ui/src/components/Buttons'
-import '@elixira/ui/src/main.css'
+import { Editor } from './pages/editor'
 
 function App(): JSX.Element {
-  return (
-    <>
-      <Button />
-    </>
-  )
+  return <Editor />
 }
 
 export default App
