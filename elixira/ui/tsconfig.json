@@ -1,4 +1,4 @@
 {
-  "extends": "@elixira/typescript-config/base.json",
+  "extends": ["@elixira/typescript-config/nextjs.json"],
   "include": ["src/**/*"]
 }
