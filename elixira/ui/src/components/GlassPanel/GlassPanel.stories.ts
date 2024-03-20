@@ -13,6 +13,9 @@ const meta = {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
+    backgroundColor: { control: "color" },
+    padding: { control: { type: "select", options: ["sm", "md", "lg"] } },
+    opacity: { control: "number", min: 0, max: 1 },
     rounded: { control: "boolean" },
     shadowStrength: {
       control: {

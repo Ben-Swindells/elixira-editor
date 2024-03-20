@@ -6,7 +6,6 @@ module.exports = {
     "./../../elixira/ui/.storybook/**/*.{html,js,ts,jsx,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  safelist: ["shadow-sm", "shadow-md", "shadow-lg"],
   theme: {
     extend: {
       colors: {
