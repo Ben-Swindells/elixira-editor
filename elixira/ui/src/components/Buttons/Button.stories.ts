@@ -13,8 +13,22 @@ const meta = {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
+    clicked: { control: "boolean" },
     padding: { control: { type: "select", options: ["sm", "md", "lg"] } },
-    backgroundColor: { control: "select", options: ["toggledOn"] },
+    backgroundColor: {
+      control: "select",
+      options: ["toggledOn", "toggledOff"],
+    },
+    hoverBackgroundColor: {
+      control: "select",
+      options: ["toggledOn", "toggledOff"],
+    },
+    rounded: {
+      control: { type: "select", options: ["none", "sm", "md", "lg"] },
+    },
+    shadowStrength: {
+      control: { type: "select", options: ["none", "sm", "md", "lg"] },
+    },
     children: { control: "any" },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args

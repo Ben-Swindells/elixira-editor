@@ -10,7 +10,6 @@ export type GlassPanelProps = {
   padding?: PaddingTypes;
   rounded?: boolean;
   backgroundColor?: string;
-  opacity?: number;
   children?: React.ReactNode;
 };
 
@@ -19,15 +18,13 @@ export const GlassPanel = ({
   rounded = true,
   padding = "sm",
   children,
-  backgroundColor = "black",
-  opacity = 0.5,
+  backgroundColor = "rgba(0, 0, 0, 0.3)",
 }: GlassPanelProps) => {
   return (
     <div
       className={`${rounded ? "rounded-md" : ""} ${shadowStrengthStyles[shadowStrength]} ${paddingStyles[padding]} h-full w-full`}
       style={{
         backgroundColor: backgroundColor,
-        opacity,
       }}
     >
       {children}

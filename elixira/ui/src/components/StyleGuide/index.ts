@@ -1,6 +1,7 @@
 export type PaddingTypes = "sm" | "md" | "lg";
-export type ShadowTypes = "sm" | "md" | "lg";
-export type ColorTypes = "toggledOn";
+export type ShadowTypes = "none" | "sm" | "md" | "lg";
+export type RoundedTypes = "none" | "sm" | "md" | "lg";
+export type ColorTypes = "toggledOn" | "toggledOff";
 
 export const paddingStyles = {
   sm: "p-2",
@@ -8,12 +9,21 @@ export const paddingStyles = {
   lg: "p-8",
 };
 
+export const roundedStyles = {
+  none: "",
+  sm: "rounded-sm",
+  md: "rounded-md",
+  lg: "rounded-xl",
+};
+
 export const shadowStrengthStyles = {
+  none: "",
   sm: "shadow-sm",
   md: "shadow-md",
   lg: "shadow-lg",
 };
 
 export const colorStyles = {
+  toggledOff: "#2F0C3F",
   toggledOn: "#60B342",
 };
