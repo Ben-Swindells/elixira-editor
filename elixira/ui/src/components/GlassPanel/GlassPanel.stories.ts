@@ -3,7 +3,7 @@ import { GlassPanel, GlassPanelProps } from ".";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Example/GlassPanel",
+  title: "Elixira UI/GlassPanel",
   component: GlassPanel,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout

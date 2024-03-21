@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FF6363",
+        toggledOn: "#60B342",
       },
       boxShadow: {
         top: "6px 0 0 0 rgb(0 0 0 / 0.1), 5px 0 0 0 rgb(0 0 0 / 0.1)",
