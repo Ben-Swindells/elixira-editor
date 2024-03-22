@@ -24,6 +24,6 @@ export const shadowStrengthStyles = {
 };
 
 export const colorStyles = {
-  toggledOff: "#2F0C3F",
-  toggledOn: "#60B342",
+  toggledOff: "#8142ff",
+  toggledOn: "#ff00ff",
 };

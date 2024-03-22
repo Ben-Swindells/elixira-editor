@@ -43,7 +43,7 @@ export const Button = ({
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => onClick(index)}
-      className={`${roundedStyles[rounded]} ${paddingStyles[padding]} ${shadowStrengthStyles[shadowStrength]} mx-2`}
+      className={`${roundedStyles[rounded]} ${paddingStyles[padding]} ${shadowStrengthStyles[shadowStrength]} mx-[5px] `}
       style={{
         backgroundColor: hover
           ? clicked
