@@ -1,5 +1,5 @@
 {
-  "name": "elixira-editor",
+  "name": "@elixira/elixira",
   "private": true,
   "scripts": {
     "build": "turbo build",

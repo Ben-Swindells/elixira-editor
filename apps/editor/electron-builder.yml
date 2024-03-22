@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: editor
+appId: com.elixira.app
+productName: Elixira engine
 directories:
   buildResources: build
 files:
@@ -12,13 +12,14 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: editor
+  executableName: Elixira engine
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always
 mac:
+  name: Elixira engine
   entitlementsInherit: build/entitlements.mac.plist
   extendInfo:
     - NSCameraUsageDescription: Application requests access to the device's camera.

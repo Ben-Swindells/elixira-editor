@@ -43,7 +43,7 @@ export const Toolbar = () => {
           >
             {item.icon}
           </Button>
-          <div className="mt-5 absolute ml-[-65px]">
+          <div className="mt-3 absolute ml-[-65px]">
             {selected === index && (
               <Dropdown
                 backgroundColor="rgba(189, 66, 255, 0.7)"
