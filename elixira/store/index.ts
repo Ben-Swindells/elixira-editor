@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import elementsReducer from "./reducers/game/element";
+import atelierReducer from "./reducers/game/atelier";
 
 export const store = configureStore({
   reducer: {
     game: combineReducers({
-      elementsReducer
+      atelier: atelierReducer,
     }),
   },
 });
