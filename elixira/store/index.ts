@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import gameReducer from "./reducers/game";
+import elementsReducer from "./reducers/game/element";
 
 export const store = configureStore({
   reducer: {
-    game: combineReducers({}),
+    game: combineReducers({
+      elementsReducer
+    }),
   },
 });
 

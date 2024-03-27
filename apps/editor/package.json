@@ -36,6 +36,7 @@
     "@elixira/store": "workspace:store",
     "@elixira/tailwind-config": "workspace:configs",
     "@elixira/ui": "workspace:ui",
+    "@elixira/atelier": "*",
     "@types/node": "^18.19.9",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",

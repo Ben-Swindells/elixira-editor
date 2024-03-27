@@ -54,6 +54,9 @@ importers:
       '@electron-toolkit/tsconfig':
         specifier: ^1.0.1
         version: 1.0.1(@types/node@18.19.9)
+      '@elixira/atelier':
+        specifier: '*'
+        version: link:../../engine/atelier
       '@elixira/store':
         specifier: workspace:store
         version: link:../../elixira/store
@@ -145,12 +148,24 @@ importers:
 
   elixira/store:
     dependencies:
+      '@elixira/typescript-config':
+        specifier: workspace:configs
+        version: link:../../configs/typescript-config
       '@reduxjs/toolkit':
         specifier: ^2.2.2
         version: 2.2.2(react-redux@9.1.0)(react@18.2.0)
+      '@types/react':
+        specifier: ^18.2.70
+        version: 18.2.70
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       react-redux:
         specifier: ^9.1.0
-        version: 9.1.0(react@18.2.0)(redux@5.0.1)
+        version: 9.1.0(@types/react@18.2.70)(react@18.2.0)(redux@5.0.1)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.3
 
   elixira/ui:
     dependencies:
@@ -239,6 +254,22 @@ importers:
       vite:
         specifier: ^5.1.6
         version: 5.1.6(@types/node@18.19.9)
+
+  engine/atelier:
+    dependencies:
+      '@react-three/drei':
+        specifier: ^9.102.6
+        version: 9.102.6(@react-three/fiber@8.15.19)(@types/react@18.2.61)(@types/three@0.162.0)(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
+      '@react-three/fiber':
+        specifier: ^8.15.19
+        version: 8.15.19(react-dom@18.2.0)(react@18.2.0)(three@0.162.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      typescript:
+        specifier: ^5.4.3
+        version: 5.4.3
 
 packages:
 
@@ -2378,7 +2409,7 @@ packages:
     dependencies:
       immer: 10.0.4
       react: 18.2.0
-      react-redux: 9.1.0(react@18.2.0)(redux@5.0.1)
+      react-redux: 9.1.0(@types/react@18.2.70)(react@18.2.0)(redux@5.0.1)
       redux: 5.0.1
       redux-thunk: 3.1.0(redux@5.0.1)
       reselect: 5.1.0
@@ -3600,6 +3631,14 @@ packages:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
       csstype: 3.1.2
+
+  /@types/react@18.2.70:
+    resolution: {integrity: sha512-hjlM2hho2vqklPhopNkXkdkeq6Lv8WSZTpr7956zY+3WS5cfYUewtCzsJLsbW5dEv3lfSeQ4W14ZFeKC437JRQ==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.3
+      csstype: 3.1.2
+    dev: false
 
   /@types/resolve@1.20.6:
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
@@ -5082,7 +5121,7 @@ packages:
     resolution: {integrity: sha512-6boGVaglwblBgJqGyxm4+xCmEGcWgnWHSWHY5jad58awQhB6gftq0G8HbzU39YqCIYHMLAiL1yjwiZ36m/CL8w==}
     dependencies:
       glob: 10.3.10
-      typescript: 5.3.3
+      typescript: 5.4.3
     dev: true
 
   /consola@3.2.3:
@@ -7773,6 +7812,7 @@ packages:
 
   /loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
     dependencies:
       js-tokens: 4.0.0
 
@@ -8871,7 +8911,7 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
-  /react-redux@9.1.0(react@18.2.0)(redux@5.0.1):
+  /react-redux@9.1.0(@types/react@18.2.70)(react@18.2.0)(redux@5.0.1):
     resolution: {integrity: sha512-6qoDzIO+gbrza8h3hjMA9aq4nwVFCKFtY2iLxCtVT38Swyy2C/dJCGBXHeHLtx6qlg/8qzc2MrhOeduf5K32wQ==}
     peerDependencies:
       '@types/react': ^18.2.25
@@ -8886,6 +8926,7 @@ packages:
       redux:
         optional: true
     dependencies:
+      '@types/react': 18.2.70
       '@types/use-sync-external-store': 0.0.3
       react: 18.2.0
       redux: 5.0.1
@@ -10227,6 +10268,11 @@ packages:
 
   /typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  /typescript@5.4.3:
+    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true

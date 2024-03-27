@@ -1,0 +1,9 @@
+{
+  "extends": "@elixira/typescript-config/react-library.json",
+  "include": [
+    "reducers/**/*",
+    "**/*.ts",
+    "**/*.tsx",
+    "declarations.d.ts"
+  ]
+}
