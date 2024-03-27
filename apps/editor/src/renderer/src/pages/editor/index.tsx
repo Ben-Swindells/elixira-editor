@@ -16,16 +16,16 @@ export const Editor = ({}: EditorProps) => {
         </GlassPanel>
       </div>
       <div className="flex flex-row w-full h-full relative">
-        <div className="flex-none w-[350px] h-full">
+        <div className="flex-none w-[300px] h-full">
           <GlassPanel rounded={false} padding="sm"></GlassPanel>
         </div>
-        <div className="grow flex-auto w-full h-full">
+        <div className="grow flex-auto w-full h-full overflow-hidden">
           <GameWindow>
             <gridHelper />
             <OrbitControls />
           </GameWindow>
         </div>
-        <div className="flex-none w-[350px] h-full">
+        <div className="flex-none w-[300px] h-full">
           <GlassPanel rounded={false} padding="sm"></GlassPanel>
         </div>
       </div>
